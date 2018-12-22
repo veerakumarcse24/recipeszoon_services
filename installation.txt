@@ -1,0 +1,32 @@
+Create virtualenvironment:
+--------------------------
+
+	virtualenv -p python3 pythonEnv
+	Activate virtualEnv : source pythonEnv/bin/activate
+
+	For windows:
+	-------------
+	python -m venv pythonEnv
+	pythonEnv\Scripts\activate
+
+Install Django:
+---------------
+
+pip install django==1.11.2 
+pip install djangorestframework
+pip install python-dateutil
+pip install django-cors-headers
+
+mysql installation:
+--------------------
+pip install mysqlclient==1.3.12
+
+Migrations:
+------------
+python manage.py makemigrations
+python manage.py migrate
+
+
+Run backend:
+-------------
+python manage.py runsslserver 9123
