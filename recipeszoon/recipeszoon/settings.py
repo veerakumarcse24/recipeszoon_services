@@ -25,12 +25,15 @@ SECRET_KEY = 'j+y_!+j#^m!-81g=wwsd_s!rb$p!8q5ue3$@%6%@$n=sd8o_%7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'recipesApi.apps.RecipesapiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,7 +81,7 @@ WSGI_APPLICATION = 'recipeszoon.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'recipeszoon',
+        'NAME': 'recipeszoonDB',
         'USER':'root',
         'PASSWORD':'',
         'HOST': '127.0.0.1',
